@@ -1,0 +1,93 @@
+<?php
+error_reporting(0);
+?>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/jquery.jscrollpane.css"/>
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
+	<style>
+	.fon{
+	background-image: url(img/fon.jpg);
+	}
+	</style>
+
+  </head>
+
+  <body class="otst" >
+	  <div class="container" >
+		  <div class="row" >
+			  <div class="col-xs-3" >
+			  </div>
+			  <div class="col-xs-6 fon" >
+				  <div class="row" >
+					  <div class="col-xs-12" >
+						<form method="POST" action="reg.php">
+						<p>Логин: </p>
+						<input type="text" name="login" class="form-control" placeholder="Ведите логин">
+						<p>Имя: </p>
+						<input type="text" name="fname" class="form-control" placeholder="Ведите имя">
+						<p>Фамилия: </p>
+						<input type="text" name="sname" class="form-control" placeholder="Ведите фамилию">
+						<p>Пароль: </p>
+						<input type="text" name="password" class="form-control" placeholder="Ведите пароль">
+						<p>Повторите пароль: </p>
+						<input type="text" name="password2" class="form-control" placeholder="Ведите пароль">
+						<p>Дата рождения: </p>
+						<input type="text" name="data" class="form-control" placeholder="Ведите дату рождения">
+						<p>Ссылка на страницу VK: </p>
+						<input type="text" name="vk" class="form-control" placeholder="Ссылка на vk">
+						<p>Номер телефон: </p>
+						<input type="text" name="mobile" class="form-control" placeholder="89300123001">
+						<p>Почтовый адресс: </p>
+						<input type="text" name="email" class="form-control" placeholder="Введите почту">
+						<p>Информация о себе: </p>
+						<textarea name="info" class="form-control" rows="3"></textarea>
+						<br>
+						 <button type="submit" class="btn btn-primary">Зарегестрироваться</button>
+						</form>
+		<?php
+	$dbname = 'Chat';
+	$login ='root';
+	$password = 'root';
+	$location = 'localhost';
+	mysql_connect($location, $login, $password);
+	mysql_select_db($dbname);
+	$login=$_POST['login'];
+	$fname=$_POST['fname'];
+	$sname=$_POST['sname'];
+	$password=$_POST['password'];
+	$data=$_POST['data'];
+	$vk=$_POST['vk'];
+	$mobile=$_POST['mobile'];
+	$email=$_POST['email'];
+	$info=$_POST['info'];
+	if ($login!=null and $password!=null)
+	{
+	$query="INSERT INTO Users(login,fname,sname,password,data,vk,mobile,email,info) VALUES ('".$login."', '".$fname."', '".$sname."', '".$password."', '".$data."', '".$vk."', '".$mobile."', '".$email."', '".$info."')";
+	mysql_query($query);
+	mysql_close();
+	header ('Location: vhod.php');  // перенаправление на нужную страницу
+	exit();
+	}
+	else
+		mysql_close();
+	?>
+					  </div>
+				  </div>
+		
+	
+			  <div class="col-xs-3" >
+			  </div>
+		  </div>
+	  </div>
+  </body>
+  </html>
+  
