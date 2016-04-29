@@ -32,7 +32,7 @@ echo "<td>";
 print $result->description;
 echo "</td>";
 echo "</tr>";
-$result = mysql_fetch_array($answer);
+
 }
 mysql_close();
 
