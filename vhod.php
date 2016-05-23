@@ -15,21 +15,25 @@ error_reporting(0);
 	<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
 	<style>
 	.fon{
+	background-size: 100% 100%;
+	background-image: url(img/fon4.png);
+	}
+	.fonq{
 	background-image: url(img/fon.jpg);
 	}
 	</style>
 
   </head>
 
-  <body class="otst" >
+  <body class="otst fon" >
 	  <div class="container" >
 		  <div class="row" >
 			  <div class="col-xs-3" >
 			  </div>
-			  <div class="col-xs-6 fon" >
+			  <div class="col-xs-6 fonq mt" >
 				  <div class="row" >
 					  <div class="col-xs-12" >
-						<form class="form-horizontal" role="form" method="POST" action="vhod.php">
+						<form class="form-horizontal mt1" role="form" method="POST" action="vhod.php">
 						  <div class="form-group">
 							<label for="inputEmail3" class="col-sm-2 control-label">Логин</label>
 							<div class="col-sm-10">
@@ -76,8 +80,10 @@ error_reporting(0);
 				session_start();
 				$_SESSION['iduser']=$iduser;
 				//print $iduser;
+				setcookie('proverka', $iduser,time()+3600);
 				if ($iduser!= null)
 				{
+					$login=$result->login;
 					header ('Location: chat.php');  // перенаправление на нужную страницу
 					exit();
 					mysql_close();

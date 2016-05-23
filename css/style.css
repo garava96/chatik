@@ -1,5 +1,5 @@
 .roww{
-height: 500px;
+height: 400px;
 }
 .fon{
 	background-image: img/fon.jpg;
@@ -14,31 +14,34 @@ width: 100%;
 width: 90%
 }
 .chat{
-height: 500px;
+background-image: img/fonchat.png;
+
+height: 400px;
+overflow-x: auto;
+}
+.people{
+background-image: img/fonchat.png;
+height: 400px;
 overflow-x: auto;
 }
 .input-text{
 height: 34px;
-width: 79%;
+width: 100%;
 }
 .otst{
-	margin:  ;
-	margin-bottom: ;
-	margin-left: ;
-	margin-right: ;
-	margin-top: ;
-	
+	margin:0;
+	padding:0;
+	outline:none;
+	}
+.ml{
+	margin-left: 15px;
 }
-::-webkit-scrollbar {
-    width: 12px;
+.mr{
+	margin-right: 15px;
 }
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
+.mt{
+	margin-top: 175px;
 }
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+.mt1{
+	margin-top: 15px;
 }

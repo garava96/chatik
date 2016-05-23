@@ -1,4 +1,22 @@
-<?php
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Информация о пользователе</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="" rel="stylesheet">
+	<style>
+	.fon{
+	background-image: url(img/fon5.png);
+	background-size: 100% 100%;
+	}
+	</style>
+  </head>
+  <body class="fon">
+  <?php
 error_reporting(0);
 session_start();
 $iduser=$_SESSION['iduser'];										
@@ -20,19 +38,9 @@ $mobile=$result->mobile;
 $info=$result->info;
 mysql_close();
 ?>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Информация о пользователе</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="" rel="stylesheet">
-  </head>
-  <body>
-	<div class="container">
-	<div class="row" >
+	<br><br><br><br><br>
+	<div class="container ">
+	<div class="row " >
 			  <div class="col-xs-4" >
 			  <img src="img/smile.jpg" alt="..." class="img-rounded">
 			  </div>
@@ -59,7 +67,7 @@ mysql_close();
 			  </div>
 			  
 	</div>
-	<div class="row" >
+	<div class="row ml" >
 			  <div class="col-xs-12" >
 				 <div class="row" >
 				 <br>
@@ -67,6 +75,8 @@ mysql_close();
 					</div>
 			  </div>
 	</div>
-	<a href="redprofil.php">Изменить</a>	
+	</div>
+	<br><br><br><br><br>
+	<center><a href="redprofil.php">Изменить</a></center>	
   </body>
 </html>

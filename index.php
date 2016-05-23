@@ -15,18 +15,21 @@ $_REQUEST['name']
 	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
 	<style>
-
+	.fon{
+	background-size: 100% 100%;
+	background-image: url(img/fon1.png);
+	}
 	</style>
 
   </head>
   
   
-  <body class="otst" >
+  <body class="otst fon" >
 	  <div class="container" >
 		  <div class="row" >
 			  <div class="col-xs-4" >
 			  </div>
-			  <div class="col-xs-4 fon" >
+			  <div class="col-xs-4 " >
 				  <div class="row" >
 					  <div class="col-xs-12" >
 						  <nav role="navigation" class="navbar navbar-default" width="50%">

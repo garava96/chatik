@@ -29,8 +29,14 @@ mysql_close();
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="" rel="stylesheet">
+	<style>
+	.fon{
+	background-image: url(img/fon5.png);
+	background-size: 100% 100%;
+	}
+	</style>
   </head>
-  <body>
+  <body class="fon">
 	<div class="container">
 	<div class="row" >
 			  <div class="col-xs-4" >
@@ -40,7 +46,17 @@ mysql_close();
 			  
 			  </div>
 	 </div>
-		<div class="col-xs-12" >
+	 <br><br><br><br>
+		<div class="col-xs-3" >
+		<b>Имя</b>: <br>
+		<b>Фамилия</b>: <br>
+		<b>Дата рождения</b>: <br>
+		<b>Вконтакте</b>: <br>
+		<b>Почта</b>: <br>
+		<b>Телефон</b>: <br>
+		<b>О себе</b>: <br>
+		</div>
+		<div class="col-xs-9" >
 		<form method="POST" action="redprofil.php">
 			  <div class="row" >
 				<input type="text" class="qqq" name="fname" value="<?php print $fname; ?>" />
@@ -61,7 +77,7 @@ mysql_close();
 				<input type="text" class="qqq" name="mobile" value="<?php print $mobile; ?>" />
 			  </div>
 			  <div class="row" >
-				<input type="text" class="qqq" name="info" value="<?php print $info; ?>" />
+				<textarea class="qqq" rows="10" cols="45" name="info"><?php print $info; ?></textarea>
 				<br>
 				<button type="submit" class="btn btn-success">Сохранить</button>
 				</form>
