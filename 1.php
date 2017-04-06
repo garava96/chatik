@@ -1,5 +1,5 @@
 <html>
-<head>123
+<head>
     <meta charset="UTF-8">
     <title>PHP</title>
     <link href="css/bootstrap.css" rel="stylesheet">
